@@ -5,17 +5,14 @@ class Polinomial{
       this.degree = this.coef.length-1;
     }
   
-    trim(){
+    trim(){//Toglie gli indici con valore undefined
       if (this.coef.length>0){
         var i = this.coef.length-1;
         while(!this.coef[i])
           i--;
         this.coef.length = i+1;
       }
-  
-  
     }
-  
   
   print(){
     console.poly(this.coef);
@@ -60,7 +57,6 @@ class Polinomial{
       }
   
     product = product.sum(new Polinomial(a));
-  
     }
     
     return product;
@@ -79,6 +75,5 @@ class Polinomial{
         c.shift();
         return(new Polinomial(c));
       }
-      
     }
 }

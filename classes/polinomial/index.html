@@ -4,9 +4,7 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
     <table id="display">
@@ -14,11 +12,11 @@
 
     <script src="polinomial.js"></script>
     <script>
-/*    
+
 const X="x", NUM="a", NEG="--", ADD="+", MUL="*",
       SUB="-", POW="^n", DIV="/", EXP="e^",
       SIN="sin", COS="cos"
-*/
+
 function latex(e) {
   const [op, x, y] = e
   switch (op) {
@@ -59,7 +57,20 @@ function typeset(t,c) {
 
 console.math = (e,c) => typeset(latex(e),c) 
 console.poly = (p,c) => typeset(poly(p),c)
-  </script>
+
+let poli = new Polinomial([4,5,2,3,4]);
+let poli2 = new Polinomial([2,2,3]);
+poli.print();
+poli2.print();
+console.log(poli.toString());
+console.log(poli.eval(2));
+let poli3 = poli.sum(poli2);
+let poli4 = poli3.multiply(poli2)
+poli3.print();
+poli4.print();
+poli5 = poli.derivative();
+poli5.print();
+</script>
 
   </body>
 </html>
