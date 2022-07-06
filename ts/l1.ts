@@ -20,7 +20,7 @@ let tupla: [string, number] = ['ciao', 5];
 console.log(tupla)
 
 enum Color{
-    Red, 
+    Red,  
     Green=5, 
     Blue,
 }
@@ -28,3 +28,12 @@ let g: Color = Color.Green
 let b: Color = Color.Blue
 console.log(g)
 console.log(Color[6])
+
+interface labeledValued{
+    label:string;
+}
+let label:labeledValued = {label:'ciao'}
+function printLabel(label: {label:string}):string{
+    return label.label;
+}
+console.log(printLabel(label));

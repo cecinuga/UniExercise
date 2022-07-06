@@ -24,3 +24,8 @@ var g = Color.Green;
 var b = Color.Blue;
 console.log(g);
 console.log(Color[6]);
+var label = { label: 'ciao' };
+function printLabel(label) {
+    return label.label;
+}
+console.log(printLabel(label));
